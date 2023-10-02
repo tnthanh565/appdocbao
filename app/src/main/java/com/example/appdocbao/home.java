@@ -1,5 +1,6 @@
 package com.example.appdocbao;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,15 +12,18 @@ import java.util.List;
 
 import demo.bxh;
 import demo.bxhAdapter;
+import demo.hot;
+import demo.hotAdapter;
 
 public class home extends AppCompatActivity {
 
     private RecyclerView rcvBXH;
+    private RecyclerView rcvhot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
 
         rcvBXH = findViewById(R.id.rcv_bxh);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
@@ -39,6 +43,31 @@ public class home extends AppCompatActivity {
         list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
 
         list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+
+        return list;
+    }
+    @SuppressLint("MissingInflatedId")
+    protected void onECreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        rcvhot = findViewById(R.id.rcv_hot);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+        rcvhot.setLayoutManager(linearLayoutManager);
+
+        hotAdapter adapter = new hotAdapter(getListhot());
+        rcvhot.setAdapter(adapter);
+    }
+
+    private List<hot> getListhot(){
+        List<hot> list = new ArrayList<>();
+        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+
+        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+
+        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+
+        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
 
         return list;
     }
