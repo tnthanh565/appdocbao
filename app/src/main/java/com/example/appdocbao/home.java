@@ -1,74 +1,70 @@
 package com.example.appdocbao;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import demo.Book;
+
+
+import android.os.Bundle;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-import demo.bxh;
-import demo.bxhAdapter;
-import demo.hot;
-import demo.hotAdapter;
+
+import Category.Category;
+import Category.CategoryAdapter;
 
 public class home extends AppCompatActivity {
 
-    private RecyclerView rcvBXH;
-    private RecyclerView rcvhot;
+
+
+    private RecyclerView rcvCategory;
+    private CategoryAdapter categoryAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
-        rcvBXH = findViewById(R.id.rcv_bxh);
+
+
+
+        rcvCategory = findViewById(R.id.rcv_category);
+        categoryAdapter = new CategoryAdapter(this);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-        rcvBXH.setLayoutManager(linearLayoutManager);
+        rcvCategory.setLayoutManager(linearLayoutManager);
 
-        bxhAdapter adapter = new bxhAdapter(getListbxh());
-        rcvBXH.setAdapter(adapter);
+        categoryAdapter.setData(getListCategory());
+        rcvCategory.setAdapter(categoryAdapter);
     }
 
-    private List<bxh> getListbxh(){
-        List<bxh> list = new ArrayList<>();
-        list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-        list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
 
-        list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+    private List<Category> getListCategory() {
+        List<Category> listCat = new ArrayList<>();
 
-        list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+        List<Book> listBook = new ArrayList<>();
+        listBook.add(new Book(R.drawable.img_1, "Book 1"));
+        listBook.add(new Book(R.drawable.img_2, "Book 2"));
+        listBook.add(new Book(R.drawable.img_3, "Book 3"));
+        listBook.add(new Book(R.drawable.img_4, "Book 4"));
 
-        list.add(new bxh(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
+        listBook.add(new Book(R.drawable.img_1, "Book 1"));
+        listBook.add(new Book(R.drawable.img_2, "Book 2"));
+        listBook.add(new Book(R.drawable.img_3, "Book 3"));
+        listBook.add(new Book(R.drawable.img_4, "Book 4"));
 
-        return list;
-    }
-    @SuppressLint("MissingInflatedId")
-    protected void onECreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        rcvhot = findViewById(R.id.rcv_hot);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-        rcvhot.setLayoutManager(linearLayoutManager);
+        listCat.add(new Category("Category 1", listBook));
+        listCat.add(new Category("Category 2", listBook));
+        listCat.add(new Category("Category 3", listBook));
+        listCat.add(new Category("Category 4", listBook));
+        listCat.add(new Category("Category 1", listBook));
+        listCat.add(new Category("Category 1", listBook));
 
-        hotAdapter adapter = new hotAdapter(getListhot());
-        rcvhot.setAdapter(adapter);
-    }
-
-    private List<hot> getListhot(){
-        List<hot> list = new ArrayList<>();
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        return list;
+        return listCat;
     }
 }
