@@ -1,7 +1,7 @@
 package demo;
 
 public class hot {
-    private int imghot;
+   private int imghot;
     private String tvhot;
 
     public hot(int imghot, String tvhot) {
