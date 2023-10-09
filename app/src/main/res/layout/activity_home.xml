@@ -19,6 +19,7 @@
             />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_hot"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         >
@@ -61,7 +62,7 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/baseline_home_24"
             android:layout_weight="1"
-            android:text="Cá nhân"
+            android:text="Cá Nhân"
             android:backgroundTint="#00000000"/>
     </LinearLayout>
 
