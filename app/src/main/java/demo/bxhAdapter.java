@@ -31,22 +31,18 @@ public class bxhAdapter extends RecyclerView.Adapter<bxhAdapter.bxhViewHoler>{
     @Override
     public void onBindViewHolder(@NonNull bxhViewHoler holder, int position) {
         bxh bxh = mbxh.get(position);
-        if(bxh == null) {
-            return;
-        }
+
         holder.imgbxh.setImageResource(bxh.getImgBXH());
         holder.tvbxh.setText(bxh.getTvBXH());
     }
 
     @Override
     public int getItemCount() {
-        if(mbxh != null){
-            return  mbxh.size();
-        }
-        return 0;
+
+        return mbxh.size();
     }
 
-    public class bxhViewHoler extends RecyclerView.ViewHolder{
+    public static class bxhViewHoler extends RecyclerView.ViewHolder{
         ImageView imgbxh;
         TextView tvbxh;
 
