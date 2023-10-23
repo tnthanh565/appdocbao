@@ -47,7 +47,7 @@ public class demoAdapter extends RecyclerView.Adapter<demoAdapter.demoViewHoler>
         return 0;
     }
 
-    public class demoViewHoler extends RecyclerView.ViewHolder{
+    public static class demoViewHoler extends RecyclerView.ViewHolder{
         private ImageView TS1I;
         private TextView TS1T;
 

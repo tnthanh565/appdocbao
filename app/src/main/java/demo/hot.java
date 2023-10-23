@@ -1,27 +1,28 @@
 package demo;
 
 public class hot {
-    private int imghot;
-    private String tvhot;
+   private int imgHot;
 
-    public hot(int imghot, String tvhot) {
-        this.imghot = imghot;
-        this.tvhot = tvhot;
+   private String tvHots;
+
+    public hot(int imgHot, String tvHots) {
+        this.imgHot = imgHot;
+        this.tvHots = tvHots;
     }
 
-    public int getImgBXH() {
-        return imghot ;
+    public int getImgHot() {
+        return imgHot;
     }
 
-    public void setImghot(int imghot) {
-        this.imghot = imghot;
+    public void setImgHot(int imgHot) {
+        this.imgHot = imgHot;
     }
 
-    public String getTvhot() {
-        return tvhot;
+    public String getTvHots() {
+        return tvHots;
     }
 
-    public void setTvhot(String tvhot) {
-        this.tvhot = tvhot;
+    public void setTvHots(String tvHots) {
+        this.tvHots = tvHots;
     }
 }

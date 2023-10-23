@@ -15,10 +15,10 @@ import java.util.List;
 
 public class hotAdapter extends RecyclerView.Adapter<hotAdapter.hotViewHoler> {
 
-    private List<hot> mhot;
+    private List<hot> hotList;
 
-    public hotAdapter(List<hot> mhot) {
-        this.mhot = mhot;
+    public hotAdapter(List<hot> hotList) {
+        this.hotList = hotList;
     }
 
     @NonNull
@@ -30,23 +30,18 @@ public class hotAdapter extends RecyclerView.Adapter<hotAdapter.hotViewHoler> {
 
     @Override
     public void onBindViewHolder(@NonNull hotViewHoler holder, int position) {
-        hot hot = mhot.get(position);
-        if (hot == null) {
-            return;
-        }
-        holder.imghot.setImageResource(hot.getImgBXH());
-        holder.tvhot.setText(hot.getTvhot());
+        hot hot = hotList.get(position);
+        holder.imghot.setImageResource(hot.getImgHot());
+        holder.tvhot.setText(hot.getTvHots());
     }
 
     @Override
     public int getItemCount() {
-        if (mhot != null) {
-            return mhot.size();
-        }
-        return 0;
+
+        return hotList.size();
     }
 
-    public class hotViewHoler extends RecyclerView.ViewHolder {
+    public static class hotViewHoler extends RecyclerView.ViewHolder {
         private ImageView imghot;
         private TextView tvhot;
 

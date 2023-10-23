@@ -46,29 +46,5 @@ public class home extends AppCompatActivity {
 
         return list;
     }
-    @SuppressLint("MissingInflatedId")
-    protected void onECreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        rcvhot = findViewById(R.id.rcv_hot);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-        rcvhot.setLayoutManager(linearLayoutManager);
 
-        hotAdapter adapter = new hotAdapter(getListhot());
-        rcvhot.setAdapter(adapter);
-    }
-
-    private List<hot> getListhot(){
-        List<hot> list = new ArrayList<>();
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        list.add(new hot(R.drawable.ts1 , "Vợ ung thư mang 140 triệu"));
-
-        return list;
-    }
 }
