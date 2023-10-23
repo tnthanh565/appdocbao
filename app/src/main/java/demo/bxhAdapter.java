@@ -47,8 +47,8 @@ public class bxhAdapter extends RecyclerView.Adapter<bxhAdapter.bxhViewHoler>{
     }
 
     public class bxhViewHoler extends RecyclerView.ViewHolder{
-        private ImageView imgbxh;
-        private TextView tvbxh;
+        ImageView imgbxh;
+        TextView tvbxh;
 
         public bxhViewHoler(@NonNull View itemView) {
             super(itemView);
