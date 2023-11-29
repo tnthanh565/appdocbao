@@ -6,13 +6,18 @@
     tools:context=".homefragment"
 
     android:orientation="vertical">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="100dp"
+        android:orientation="horizontal">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hay Nhất"
             android:textSize="30dp"
@@ -21,37 +26,29 @@
             />
 
 
+
+
     </LinearLayout>
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_weight="1">-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="87dp"
-        android:layout_height="100dp"></androidx.recyclerview.widget.RecyclerView>
+
     <ScrollView
+        android:id="@+id/home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
+
         <LinearLayout
-            android:orientation="vertical"
-            android:weightSum="2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_hot"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                >
-            </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_bxh"
+                android:id="@+id/rcv_new"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
-                ></androidx.recyclerview.widget.RecyclerView>
+
+
         </LinearLayout>
     </ScrollView>
 
