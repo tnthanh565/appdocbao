@@ -10,7 +10,7 @@
         android:id="@+id/rcv_not"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_hot">
+        tools:listitem="@layout/item_new">
 
     </androidx.recyclerview.widget.RecyclerView>
 

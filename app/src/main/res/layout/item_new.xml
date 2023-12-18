@@ -16,14 +16,14 @@
         android:orientation="vertical"
         >
         <ImageView
-            android:id="@+id/img_hot"
+            android:id="@+id/img_news"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ts1"
             />
         <TextView
-            android:id="@+id/tv_hot"
+            android:id="@+id/tv_title_news"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="book1"

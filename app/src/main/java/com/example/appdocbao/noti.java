@@ -14,14 +14,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import demo.hot;
-import demo.hotAdapter;
 
 public class noti extends Fragment {
 
 
     private List<hot> hotList;
     RecyclerView rcvNot;
-    private hotAdapter hotAdapter;
     public noti() {
         // Required empty public constructor
     }
@@ -36,8 +34,7 @@ public class noti extends Fragment {
 
         rcvNot = rootView.findViewById(R.id.rcv_not);
         rcvNot.setLayoutManager(new LinearLayoutManager(getActivity()));
-        hotAdapter = new hotAdapter(hotList);
-        rcvNot.setAdapter(hotAdapter);
+
         return rootView;
     }
     private List<hot> addList(){
