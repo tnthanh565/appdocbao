@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kp">
-
+    tools:context=".kp"
+    android:background="@color/lavender">
+    
+    <TextView
+        android:id="@+id/tvAPP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="APP"
+        android:textSize="30sp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tvTT1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xu hướng"
+        android:layout_below="@id/tvAPP"
+        android:textSize="20sp"/>
     <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvBXH"
+        android:id="@+id/rcvKp2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_bxh">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTT1"
+        >
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</FrameLayout>
+</RelativeLayout>

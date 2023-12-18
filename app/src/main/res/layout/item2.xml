@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginEnd="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
     >
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/img_book"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:id="@+id/img_news"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:src="@drawable/img_1"/>
         <TextView
@@ -23,7 +22,17 @@
             android:padding="6dp"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:text="Book 1"/>
-    </LinearLayout>
+            android:layout_toRightOf="@+id/img_news"
+            android:text="Title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="newsDate"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:gravity="right"
+            android:layout_toRightOf="@+id/img_news"/>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
