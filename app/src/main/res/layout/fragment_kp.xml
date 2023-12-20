@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".kp"
     android:background="@color/lavender">
-    
-    <TextView
+
+    <ImageView
         android:id="@+id/tvAPP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="APP"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo"/>
     <TextView
         android:id="@+id/tvTT1"
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
         android:id="@+id/rcvKp2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/tvTT1"
         >
 

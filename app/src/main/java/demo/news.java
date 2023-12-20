@@ -4,11 +4,14 @@ public class news {
     int newid;
     String newtitle;
     byte[] newImage;
+    String date;
+    String author;
     String path;
-
-    public news(int newid, String newtitle, String path) {
+    public news(int newid, String newtitle, String date, String author,String path) {
         this.newid = newid;
         this.newtitle = newtitle;
+        this.date = date;
+        this.author = author;
         this.path = path;
     }
 
@@ -42,5 +45,21 @@ public class news {
 
     public void setPath(String path) {
         this.path = path;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

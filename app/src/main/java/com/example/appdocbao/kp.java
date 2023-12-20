@@ -33,13 +33,13 @@ public class kp extends Fragment {
         View view = inflater.inflate(R.layout.fragment_kp, container, false);
         database db = new database(getActivity());
         ArrayList<news> news = db.getAllnews();
-        RecyclerView rcv = view.findViewById(R.id.rcvKp2);
+        RecyclerView rcv2 = view.findViewById(R.id.rcvKp2);
         kp2Adapter adapter = new kp2Adapter(getActivity(), news);
-        rcv.setAdapter(adapter);
-        rcv.hasFixedSize();
-        rcv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rcv2.setAdapter(adapter);
+        rcv2.hasFixedSize();
+        rcv2.setLayoutManager(new LinearLayoutManager(getActivity()));
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
-        rcv.addItemDecoration(itemDecoration);
+        rcv2.addItemDecoration(itemDecoration);
 
         return view;
     }

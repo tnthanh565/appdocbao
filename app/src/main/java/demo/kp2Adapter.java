@@ -38,6 +38,8 @@ public class kp2Adapter extends RecyclerView.Adapter<kp2Adapter.Kp2ViewHolder>{
     public void onBindViewHolder(@NonNull Kp2ViewHolder holder, int position) {
         news n = news.get(position);
         holder.binding.tvTitle.setText(n.getNewtitle());
+        holder.binding.date.setText(n.getDate());
+        holder.binding.author.setText(n.getAuthor());
         Bitmap imageContent = BitmapFactory.decodeByteArray(n.getNewImage(), 0, n.getNewImage().length);
         holder.binding.imgNews.setImageBitmap(imageContent);
         holder.itemView.setOnClickListener(new View.OnClickListener() {

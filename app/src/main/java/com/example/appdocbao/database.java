@@ -65,7 +65,7 @@ public class database extends SQLiteOpenHelper {
     public ArrayList<news> getAllnews(){
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT * FROM bao";
+        String query = "SELECT * FROM news";
         Cursor cursor = null;
         if(db != null){
             cursor = db.rawQuery(query, null);
@@ -77,10 +77,12 @@ public class database extends SQLiteOpenHelper {
             ArrayList<news> news = new ArrayList<>();
             while (cursor.moveToNext()){
                 int id = cursor.getInt(0);
-                String title = cursor.getString(3);
-                byte[] image = cursor.getBlob(1);
-                String path = cursor.getString(2);
-                news n = new news(id,title,path);
+                String title = cursor.getString(1);
+                byte[] image = cursor.getBlob(2);
+                String date = cursor.getString(3);
+                String author = cursor.getString(6);
+                String path = cursor.getString(4);
+                news n = new news(id,title,date,author,path);
                 n.setNewImage(image);
                 news.add(n);
             }
