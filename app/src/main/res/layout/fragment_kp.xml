@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".kp"
+    android:padding="10dp"
     android:background="@color/lavender">
 
     <ImageView
@@ -22,7 +23,7 @@
         android:textSize="20sp"/>
     <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvKp2"
+        android:id="@+id/rcvKp1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -30,5 +31,21 @@
         >
 
     </androidx.recyclerview.widget.RecyclerView>
-
+    <TextView
+        android:id="@+id/tvTT2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quan trong"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rcvKp1"
+        android:textSize="20sp"/>
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvKp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvTT2"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
